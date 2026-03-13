@@ -1,0 +1,106 @@
+name: Bug Report
+description: Report a bug or unexpected behavior in Bulwark
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the fields below as completely as possible. Before submitting, please check the [existing issues](https://github.com/bulwarkmail/webmail/issues) to avoid duplicates.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of the bug.
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the bug.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+    validations:
+      required: true
+
+  - type: input
+    id: bulwark-version
+    attributes:
+      label: Bulwark Version
+      description: Which version of Bulwark are you using? (e.g. `0.3.1` or `main`)
+      placeholder: "0.3.1"
+    validations:
+      required: true
+
+  - type: input
+    id: stalwart-version
+    attributes:
+      label: Stalwart Mail Server Version
+      description: Which version of Stalwart are you running?
+      placeholder: "0.12.0"
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Which browser(s) are affected?
+      multiple: true
+      options:
+        - Chrome / Chromium
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Linux
+        - macOS
+        - Windows
+        - Android
+        - iOS
+        - Other
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / Screen Recording
+      description: If applicable, add screenshots or a screen recording to help explain the problem.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs or Error Output
+      description: Paste any relevant browser console errors or server-side logs here.
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information that might be relevant (e.g. deployment method, reverse proxy config).

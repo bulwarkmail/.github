@@ -1,0 +1,65 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for Bulwark
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea that would make Bulwark better? We'd love to hear it! Please describe your request in detail below.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Motivation
+      description: What problem does this feature solve? What is the current limitation or pain point?
+      placeholder: "I'm frustrated when... / It would be great if..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature you'd like to see. Be as specific as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Have you considered any alternative solutions or workarounds?
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Feature Area
+      description: Which part of Bulwark does this relate to?
+      options:
+        - Email
+        - Calendar
+        - Contacts
+        - Sieve Filters
+        - Settings
+        - Notifications
+        - Internationalization
+        - Authentication / Security
+        - Performance
+        - Accessibility
+        - Mobile / Responsive
+        - Deployment / Configuration
+        - Documentation
+        - Other
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups / Examples
+      description: If applicable, add mockups, screenshots, or links to similar features in other apps.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other context or information about the feature request.

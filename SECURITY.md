@@ -59,7 +59,7 @@ Bulwark uses **OAuth2 / OIDC with PKCE** for SSO and supports **TOTP two-factor 
 If you are self-hosting Bulwark, we recommend:
 
 - Running behind a reverse proxy (nginx, Caddy, Traefik) with TLS termination
-- Setting appropriate CSP and security headers (see the [deployment docs](https://bulwark.email/docs/deployment))
+- Setting appropriate CSP and security headers (see the [deployment docs](https://bulwarkmail.org/docs/deployment))
 - Keeping your Stalwart Mail Server and Bulwark up to date
 
 ## Scope

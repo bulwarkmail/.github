@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Documentation
-    url: https://bulwark.email/docs
+    url: https://bulwarkmail.org/docs
     about: Check the official Bulwark documentation first — your question may already be answered.
   - name: Discussions
     url: https://github.com/orgs/bulwarkmail/discussions

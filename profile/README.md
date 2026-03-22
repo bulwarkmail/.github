@@ -10,7 +10,7 @@
 
 **A modern, open-source webmail client built for [Stalwart Mail Server](https://stalw.art)**
 
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bulwarkmail/webmail/blob/main/LICENSE)
+[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-blue.svg)](LICENSE)
 [![Website](https://img.shields.io/badge/website-bulwarkmail.org-blue)](https://bulwarkmail.org)
 
 </div>

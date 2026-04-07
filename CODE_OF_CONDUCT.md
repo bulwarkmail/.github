@@ -1,3 +1,13 @@
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/webmail/refs/heads/main//public/branding/Bulwark_Logo_with_Lettering_White_and_Color.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/bulwarkmail/webmail/refs/heads/main//public/branding/Bulwark_Logo_with_Lettering_Dark_Color.svg" />
+  <img src="https://raw.githubusercontent.com/bulwarkmail/webmail/refs/heads/main//public/branding/Bulwark_Logo_with_Lettering_Dark_Color.svg" alt="Bulwark Webmail" width="280" />
+</picture>
+
+</div>
+
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge

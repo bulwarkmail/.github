@@ -20,7 +20,7 @@
 
 ## What is Bulwark?
 
-**Bulwark** is a self-hosted webmail suite that speaks [JMAP](https://jmap.io) (RFC 8620) natively and pairs with [Stalwart Mail Server](https://stalw.art). It bundles mail, calendar, contacts, and files behind a single login — the four apps most self-hosters end up wanting together — with a web-based setup wizard, OAuth2 / OIDC SSO, and an admin dashboard for fleet operators.
+**Bulwark** is a self-hosted webmail suite that speaks [JMAP](https://jmap.io) (RFC 8620) natively and pairs with [Stalwart Mail Server](https://stalw.art). It bundles mail, calendar, contacts, and files behind a single login — the four apps most self-hosters end up wanting together — with a web-based setup wizard, OAuth2 / OIDC SSO, and an admin dashboard.
 
 ## Apps
 

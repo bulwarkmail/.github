@@ -20,7 +20,7 @@
 
 ## What is Bulwark?
 
-**Bulwark** is a self-hosted webmail suite that speaks [JMAP](https://jmap.io) (RFC 8620) natively and pairs with [Stalwart Mail Server](https://stalw.art). It bundles mail, calendar, contacts, and files behind a single login — the four apps most self-hosters end up wanting together — with a web-based setup wizard, OAuth2 / OIDC SSO, and an admin dashboard.
+**Bulwark** is a self-hosted webmail suite that speaks [JMAP](https://jmap.io) (RFC 8620) natively and pairs with [Stalwart Mail Server](https://stalw.art). It bundles mail, calendar, contacts, and files behind a single login, along with a web-based setup wizard, OAuth2 / OIDC SSO, and an admin dashboard.
 
 ## Apps
 
@@ -31,13 +31,13 @@
 
 ## Features
 
-- **Setup wizard** — First-launch web UI for JMAP, OAuth, branding, and admin credentials — no `.env.local` editing
+- **Setup wizard** — First-launch web UI for JMAP, OAuth, branding, and admin credentials, with no `.env.local` editing
 - **Admin dashboard** — Manage policy, users, plugins, themes, and audit logs from the browser
 - **SSO** — OAuth2 / OIDC with PKCE and discovery, plus TOTP two-factor authentication
 - **Multi-account** — HTTP/2 connection pooling across simultaneous JMAP sessions
 - **Plugins & themes** — Bundled extensions plus a marketplace at [extensions.bulwarkmail.org](https://extensions.bulwarkmail.org)
-- **Internationalization** — 15 languages
-- **PWA** — Installable on desktop and mobile, with dark/light themes and intelligent HTML email color transformation
+- **Internationalization** — 24 languages, including right-to-left for Arabic, Hebrew, and Persian
+- **PWA** — Installable on desktop and mobile, with dark and light themes that remap HTML email colors by luminance
 - **Real-time** — Push notifications via JMAP EventSource
 
 ## Repositories
@@ -48,10 +48,15 @@
 | [native](https://github.com/bulwarkmail/native) | Native desktop and mobile apps |
 | [legacy-proxy](https://github.com/bulwarkmail/legacy-proxy) | IMAP/SMTP bridge for legacy mail clients |
 | [relay](https://github.com/bulwarkmail/relay) | Push notification relay for mobile clients |
-| [website](https://github.com/bulwarkmail/website) | Official website and documentation |
+| [plugins](https://github.com/bulwarkmail/plugins) | Example plugins and templates for the plugin API |
+| [themes](https://github.com/bulwarkmail/themes) | Theme bundles for the webmail |
+| [homeassistant-jmap](https://github.com/bulwarkmail/homeassistant-jmap) | JMAP mail integration for Home Assistant |
+| [wordpress-jmap](https://github.com/bulwarkmail/wordpress-jmap) | WordPress plugin routing `wp_mail()` over JMAP |
+| [website](https://github.com/bulwarkmail/website) | Website and documentation |
 | [branding](https://github.com/bulwarkmail/branding) | Logos and brand assets |
+| [dashboard](https://github.com/bulwarkmail/dashboard) | Internal observability stack for the org |
 
-## Tech Stack
+## Tech stack
 
 | Technology | Purpose |
 |---|---|
@@ -63,7 +68,7 @@
 | next-intl | Internationalization |
 | Stalwart | Mail server |
 
-## Getting Started
+## Getting started
 
 ```bash
 docker run -d -p 3000:3000 ghcr.io/bulwarkmail/webmail:latest

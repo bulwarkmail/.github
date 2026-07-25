@@ -49,8 +49,8 @@ body:
     id: bulwark-version
     attributes:
       label: Bulwark Version
-      description: Which version of Bulwark are you using? (e.g. `0.3.1` or `main`)
-      placeholder: "0.3.1"
+      description: Which version of Bulwark are you using? (e.g. `1.7.8` or `main`)
+      placeholder: "1.7.8"
     validations:
       required: true
 
@@ -59,7 +59,7 @@ body:
     attributes:
       label: Stalwart Mail Server Version
       description: Which version of Stalwart are you running?
-      placeholder: "0.12.0"
+      placeholder: "0.16.0"
 
   - type: dropdown
     id: browser

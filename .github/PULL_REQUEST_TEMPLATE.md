@@ -8,13 +8,13 @@
 
 - 
 
-## Related Issues
+## Related issues
 
 <!-- Link related issues using "Closes #123", "Fixes #123", or "Related to #123". -->
 
 Closes #
 
-## Type of Change
+## Type of change
 
 <!-- Check all that apply. -->
 
@@ -36,10 +36,10 @@ Closes #
 - [ ] I have updated translations (`locales/`) if my changes affect user-facing text
 - [ ] I have included screenshots or a screen recording for UI changes
 
-## Screenshots / Demo
+## Screenshots / demo
 
 <!-- For UI changes, add before/after screenshots or a screen recording. -->
 
-## Notes for Reviewers
+## Notes for reviewers
 
 <!-- Anything specific you'd like reviewers to focus on or be aware of. -->

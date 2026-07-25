@@ -2,10 +2,10 @@ blank_issues_enabled: false
 contact_links:
   - name: Documentation
     url: https://bulwarkmail.org/docs
-    about: Check the official Bulwark documentation first — your question may already be answered.
+    about: Check the official Bulwark documentation first; your question may already be answered.
   - name: Discussions
     url: https://github.com/orgs/bulwarkmail/discussions
     about: Ask questions, share ideas, and discuss Bulwark with the community.
   - name: Security Vulnerability
     url: https://github.com/bulwarkmail/webmail/security/advisories/new
-    about: Report security vulnerabilities privately — do not use a public issue.
+    about: Report security vulnerabilities privately. Do not use a public issue.

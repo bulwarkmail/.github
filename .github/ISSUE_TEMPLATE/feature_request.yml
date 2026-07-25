@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Have an idea that would make Bulwark better? We'd love to hear it! Please describe your request in detail below.
+        Describe the feature you have in mind, and the problem it would solve. Concrete examples help more than general descriptions.
 
   - type: textarea
     id: problem
@@ -40,6 +40,7 @@ body:
         - Email
         - Calendar
         - Contacts
+        - Files
         - Sieve Filters
         - Settings
         - Notifications
@@ -47,6 +48,8 @@ body:
         - Authentication / Security
         - Performance
         - Accessibility
+        - Plugins / Themes
+        - Admin Dashboard
         - Mobile / Responsive
         - Deployment / Configuration
         - Documentation

@@ -79,7 +79,7 @@ These checks run automatically on commit via Husky pre-commit hooks.
 
 Bulwark ships 24 languages, three of them right-to-left. When adding user-facing text:
 
-1. **Never hardcode strings** — always use translations via `next-intl`:
+1. **Never hardcode strings.** Always use translations via `next-intl`:
    ```tsx
    const t = useTranslations("namespace");
    return <div>{t("key")}</div>;

@@ -20,25 +20,25 @@
 
 ## What is Bulwark?
 
-**Bulwark** is a self-hosted webmail suite that speaks [JMAP](https://jmap.io) (RFC 8620) natively and pairs with [Stalwart Mail Server](https://stalw.art). It bundles mail, calendar, contacts, and files behind a single login, along with a web-based setup wizard, OAuth2 / OIDC SSO, and an admin dashboard.
+**Bulwark** is a self-hosted webmail suite that speaks [JMAP](https://jmap.io) (RFC 8620) natively and pairs with [Stalwart Mail Server](https://stalw.art). Mail, calendar, contacts, and files share one login, one settings store, and one admin dashboard.
 
 ## Apps
 
-- **Mail** — Threaded conversations, unified inbox, full-text search, Sieve filters, S/MIME, templates, multiple identities
-- **Calendar** — Month, week, day, and agenda views with drag-to-reschedule, recurring events, iMIP invitations, and CalDAV subscriptions
-- **Contacts** — Multiple address books, groups, vCard import/export, and composer autocomplete
-- **Files** — Stalwart's JMAP FileNode storage with previews and folder upload
+- **Mail** — Threading, a unified inbox, full-text search, Sieve filters, S/MIME, and templates
+- **Calendar** — Month, week, day, and agenda views. Drag an event to reschedule it; iMIP invitations go out on create and update.
+- **Contacts** — Several address books, groups, vCard import/export, and autocomplete in the composer
+- **Files** — Stalwart's native JMAP FileNode storage, browsable as a real folder tree
 
 ## Features
 
-- **Setup wizard** — First-launch web UI for JMAP, OAuth, branding, and admin credentials, with no `.env.local` editing
-- **Admin dashboard** — Manage policy, users, plugins, themes, and audit logs from the browser
-- **SSO** — OAuth2 / OIDC with PKCE and discovery, plus TOTP two-factor authentication
-- **Multi-account** — HTTP/2 connection pooling across simultaneous JMAP sessions
-- **Plugins & themes** — Bundled extensions plus a marketplace at [extensions.bulwarkmail.org](https://extensions.bulwarkmail.org)
-- **Internationalization** — 24 languages, including right-to-left for Arabic, Hebrew, and Persian
-- **PWA** — Installable on desktop and mobile, with dark and light themes that remap HTML email colors by luminance
-- **Real-time** — Push notifications via JMAP EventSource
+- **Setup wizard** — Runs on first launch and walks through JMAP, OAuth, branding, and the admin password. No `.env.local` editing.
+- **Admin dashboard** — Policy, users, plugins, themes, and the audit log, all from the browser
+- **SSO** — OAuth2 / OIDC with PKCE and discovery, plus TOTP two-factor
+- **Multi-account** — Several accounts at once. HTTP/2 lifts the five-account cap that browser connection pooling imposes on HTTP/1.1.
+- **Plugins & themes** — Bundled extensions, plus a marketplace at [extensions.bulwarkmail.org](https://extensions.bulwarkmail.org)
+- **24 languages** — Including right-to-left for Arabic, Hebrew, and Persian
+- **PWA** — Installs on desktop and mobile. Email colors are remapped by luminance, so mail hard-coded to dark-on-white stays readable on a dark theme.
+- **Real-time** — JMAP EventSource pushes new mail as it arrives
 
 ## Repositories
 

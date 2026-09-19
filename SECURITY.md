@@ -2,15 +2,17 @@
 
 ## Supported versions
 
-We provide security updates for:
+Security fixes are made on `main` and ship in the next release, whether that is a patch or a minor version. There are no maintenance branches, so only the latest release receives security fixes. To get a fix, upgrade to the latest release.
 
 | Version | Supported |
-|---------|-----------|
-| Latest (`main`) | ✅ |
-| Previous minor release | ✅ |
+|---|---|
+| Latest release | ✅ |
 | Older releases | ❌ |
+| `main` | Fixes land here first. Not for production. |
 
-We recommend always running the latest release.
+Bulwark's update notice turns red when a newer release fixes a security issue. Each fix also gets a GitHub security advisory that names the release it shipped in.
+
+The same applies to the other Bulwark repositories. The native app is in beta, and legacy-proxy is pre-1.0 and has had no security audit.
 
 ## Reporting a vulnerability
 

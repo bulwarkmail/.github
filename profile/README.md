@@ -3,10 +3,10 @@
 </p>
 
 <p align="center">
-  <a href="https://bulwarkmail.org"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/website.svg" alt="website: bulwarkmail.org" height="24" /></a>&nbsp;
-  <a href="https://github.com/bulwarkmail/webmail/releases/latest"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/release.svg" alt="latest release" height="24" /></a>&nbsp;
-  <a href="https://github.com/bulwarkmail/webmail/blob/main/LICENSE"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/license.svg" alt="license: AGPL v3" height="24" /></a>&nbsp;
-  <a href="https://discord.gg/tYCujymGrT"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/discord.svg" alt="Discord members online" height="24" /></a>
+  <a href="https://bulwarkmail.org"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/website-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/website.svg" alt="website: bulwarkmail.org" height="24" /></picture></a>&nbsp;
+  <a href="https://github.com/bulwarkmail/webmail/releases/latest"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/release-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/release.svg" alt="latest release" height="24" /></picture></a>&nbsp;
+  <a href="https://github.com/bulwarkmail/webmail/blob/main/LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/license-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/license.svg" alt="license: AGPL v3" height="24" /></picture></a>&nbsp;
+  <a href="https://discord.gg/tYCujymGrT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/discord-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/discord.svg" alt="Discord members online" height="24" /></picture></a>
 </p>
 
 Bulwark is a self-hosted, open-source webmail client for [Stalwart Mail Server](https://stalw.art). It speaks [JMAP](https://jmap.io) natively and puts mail, calendar, contacts and files behind one login, one settings store and one admin console.

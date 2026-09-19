@@ -19,8 +19,13 @@ import opentype from "opentype.js";
 const require = createRequire(import.meta.url);
 const OUT = process.env.BADGES_OUT || path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, "$1")), "..", "badges");
 
-const INK = "#18181b";
-const ON_INK = "#f2f2f3";
+// The label is the inverse of the page it sits on: ink on a light README, the
+// light neutral on GitHub dark (#0d1117), where ink all but vanishes. The README
+// picks the set with <picture> and prefers-color-scheme.
+const THEMES = {
+  light: { label: "#18181b", onLabel: "#f2f2f3", suffix: "" },
+  dark: { label: "#f2f2f3", onLabel: "#18181b", suffix: "-dark" },
+};
 const VALUE = "#c01f46"; // raspberry at link depth: white text passes 4.5:1 at badge size
 const ON_VALUE = "#ffffff";
 
@@ -51,16 +56,16 @@ function icon(name, x, color) {
   return `<g transform="translate(${x} ${y}) scale(${k})" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">${paths}</g>`;
 }
 
-function badge({ label, value, iconName }) {
+function badge({ label, value, iconName }, theme) {
   const labelStart = PAD + ICON + GAP;
-  const l = text(label, labelStart, ON_INK);
+  const l = text(label, labelStart, theme.onLabel);
   const labelW = Math.ceil(labelStart + l.width + PAD);
   const v = text(value, labelW + PAD, ON_VALUE);
   const W = Math.ceil(labelW + PAD + v.width + PAD);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}: ${value}">
 <title>${label}: ${value}</title>
-<rect width="${labelW}" height="${H}" fill="${INK}"/><rect x="${labelW}" width="${W - labelW}" height="${H}" fill="${VALUE}"/>
-${icon(iconName, PAD, ON_INK)}${l.svg}${v.svg}
+<rect width="${labelW}" height="${H}" fill="${theme.label}"/><rect x="${labelW}" width="${W - labelW}" height="${H}" fill="${VALUE}"/>
+${icon(iconName, PAD, theme.onLabel)}${l.svg}${v.svg}
 </svg>
 `;
 }
@@ -104,9 +109,11 @@ const BADGES = {
 fs.mkdirSync(OUT, { recursive: true });
 for (const [name, b] of Object.entries(BADGES)) {
   if (b.value == null) continue;
-  const file = path.join(OUT, `${name}.svg`);
-  const svg = badge(b);
-  if (fs.existsSync(file) && fs.readFileSync(file, "utf8") === svg) continue;
-  fs.writeFileSync(file, svg);
-  console.log(`wrote badges/${name}.svg (${b.value})`);
+  for (const theme of Object.values(THEMES)) {
+    const file = path.join(OUT, `${name}${theme.suffix}.svg`);
+    const svg = badge(b, theme);
+    if (fs.existsSync(file) && fs.readFileSync(file, "utf8") === svg) continue;
+    fs.writeFileSync(file, svg);
+    console.log(`wrote badges/${name}${theme.suffix}.svg (${b.value})`);
+  }
 }

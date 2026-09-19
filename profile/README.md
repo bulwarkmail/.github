@@ -1,16 +1,13 @@
-<a href="https://bulwarkmail.org">
-  <img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/profile/banner.png" alt="Bulwark: webmail for Stalwart Mail Server. Mail, calendar, contacts and files in one browser client." width="100%" />
-</a>
+<p>
+  <a href="https://bulwarkmail.org"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/profile/banner.png" alt="Bulwark: webmail for Stalwart Mail Server. Mail, calendar, contacts and files in one browser client." width="100%" /></a>
+</p>
 
-<div align="center">
-
-[![Website](https://img.shields.io/badge/website-bulwarkmail.org-db2d54)](https://bulwarkmail.org)
-[![Docs](https://img.shields.io/badge/docs-bulwarkmail.org%2Fdocs-db2d54)](https://bulwarkmail.org/docs)
-[![Release](https://img.shields.io/github/v/release/bulwarkmail/webmail?color=18181b&label=release)](https://github.com/bulwarkmail/webmail/releases/latest)
-[![License: AGPL v3](https://img.shields.io/badge/license-AGPL%20v3-18181b)](https://github.com/bulwarkmail/webmail/blob/main/LICENSE)
-[![Discord](https://img.shields.io/discord/1482128142939455674?color=5865f2&label=discord&logo=discord&logoColor=white)](https://discord.gg/tYCujymGrT)
-
-</div>
+<p align="center">
+  <a href="https://bulwarkmail.org"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/website.svg" alt="website: bulwarkmail.org" height="24" /></a>&nbsp;
+  <a href="https://github.com/bulwarkmail/webmail/releases/latest"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/release.svg" alt="latest release" height="24" /></a>&nbsp;
+  <a href="https://github.com/bulwarkmail/webmail/blob/main/LICENSE"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/license.svg" alt="license: AGPL v3" height="24" /></a>&nbsp;
+  <a href="https://discord.gg/tYCujymGrT"><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/discord.svg" alt="Discord members online" height="24" /></a>
+</p>
 
 Bulwark is a self-hosted, open-source webmail client for [Stalwart Mail Server](https://stalw.art). It speaks [JMAP](https://jmap.io) natively and puts mail, calendar, contacts and files behind one login, one settings store and one admin console.
 

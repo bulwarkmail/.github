@@ -45,6 +45,18 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: bulwark-edition
+    attributes:
+      label: Bulwark Edition
+      description: Which edition of Bulwark are you using?
+      options:
+        - Bulwark
+        - Bulwark Lite
+        - Bulwark Lite inside Stalwart
+    validations:
+      required: true
+
   - type: input
     id: bulwark-version
     attributes:

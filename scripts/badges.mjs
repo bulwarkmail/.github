@@ -2,8 +2,9 @@
 /**
  * Render the README badges into badges/*.svg in the Bulwark design system:
  * square (radius 0, like tiles and links), Hanken Grotesk 500, a Tabler icon on the ink
- * label and the value on raspberry. Text is converted to outlines so the
- * badges look the same wherever GitHub's image proxy serves them.
+ * label and the value on raspberry, or on neutral grey where the badge names
+ * Stalwart. Text is converted to outlines so the badges look the same
+ * wherever GitHub's image proxy serves them.
  *
  *   npm i --no-save opentype.js@1.3.4 @fontsource/hanken-grotesk @tabler/icons
  *   node scripts/badges.mjs
@@ -28,6 +29,13 @@ const THEMES = {
 };
 const VALUE = "#c01f46"; // raspberry at link depth: white text passes 4.5:1 at badge size
 const ON_VALUE = "#ffffff";
+// Raspberry stands for Bulwark, and Stalwart's logo red is the same colour, so
+// a badge that names Stalwart takes a neutral grey value instead: the site's
+// muted text grey on light (white text 7.3:1). On GitHub dark that grey sinks
+// into the page (2.6:1 against #0d1117), so the dark set steps up to the
+// raspberry's luminance: it stands off the page as the raspberry values do
+// (3.2:1) and keeps white text at 6.0:1.
+const NEUTRAL = { light: "#56565d", dark: "#63636a" };
 
 const H = 24;
 const PAD = 8;
@@ -56,7 +64,7 @@ function icon(name, x, color) {
   return `<g transform="translate(${x} ${y}) scale(${k})" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter">${paths}</g>`;
 }
 
-function badge({ label, value, iconName }, theme) {
+function badge({ label, value, iconName }, theme, fill = VALUE) {
   const labelStart = PAD + ICON + GAP;
   const l = text(label, labelStart, theme.onLabel);
   const labelW = Math.ceil(labelStart + l.width + PAD);
@@ -64,7 +72,7 @@ function badge({ label, value, iconName }, theme) {
   const W = Math.ceil(labelW + PAD + v.width + PAD);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${label}: ${value}">
 <title>${label}: ${value}</title>
-<rect width="${labelW}" height="${H}" fill="${theme.label}"/><rect x="${labelW}" width="${W - labelW}" height="${H}" fill="${VALUE}"/>
+<rect width="${labelW}" height="${H}" fill="${theme.label}"/><rect x="${labelW}" width="${W - labelW}" height="${H}" fill="${fill}"/>
 ${icon(iconName, PAD, theme.onLabel)}${l.svg}${v.svg}
 </svg>
 `;
@@ -104,14 +112,15 @@ const BADGES = {
   docker: { label: "docker", value: "ghcr.io/bulwarkmail/webmail", iconName: "brand-docker" },
   release: { label: "release", value: await live(release), iconName: "tag" },
   discord: { label: "discord", value: await live(discord), iconName: "brand-discord" },
+  stalwart: { label: "tested with", value: "Stalwart 1.0", iconName: "server", fill: NEUTRAL },
 };
 
 fs.mkdirSync(OUT, { recursive: true });
 for (const [name, b] of Object.entries(BADGES)) {
   if (b.value == null) continue;
-  for (const theme of Object.values(THEMES)) {
+  for (const [mode, theme] of Object.entries(THEMES)) {
     const file = path.join(OUT, `${name}${theme.suffix}.svg`);
-    const svg = badge(b, theme);
+    const svg = badge(b, theme, b.fill?.[mode]);
     if (fs.existsSync(file) && fs.readFileSync(file, "utf8") === svg) continue;
     fs.writeFileSync(file, svg);
     console.log(`wrote badges/${name}${theme.suffix}.svg (${b.value})`);

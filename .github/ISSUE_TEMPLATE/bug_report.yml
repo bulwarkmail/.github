@@ -70,8 +70,8 @@ body:
     id: stalwart-version
     attributes:
       label: Stalwart Mail Server Version
-      description: Which version of Stalwart are you running?
-      placeholder: "0.16.0"
+      description: Which exact version of Stalwart are you running? Include the patch number; a Docker tag such as `latest` or `v0.16` isn't enough.
+      placeholder: "0.16.23 or 1.0.0"
 
   - type: dropdown
     id: browser

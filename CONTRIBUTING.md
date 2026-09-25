@@ -65,6 +65,8 @@ npm run test:integration   # Playwright against Stalwart in Docker
 
 These checks run automatically on commit via Husky pre-commit hooks.
 
+The integration suite runs against `stalwartlabs/stalwart:v0.16` by default. To test another Stalwart image, such as a 1.0 build, pass it as the `STALWART_IMAGE` build argument: `STALWART_IMAGE=<image> npm run test:integration`. Remove the volumes (`docker compose down -v` in `integration/`) before switching releases: 1.0 cannot open a 0.16 data directory. [integration/README.md](https://github.com/bulwarkmail/webmail/blob/main/integration/README.md) has the details.
+
 ## Code style
 
 - Use **TypeScript** throughout: define proper types and avoid `any`

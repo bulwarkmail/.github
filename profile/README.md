@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://bulwarkmail.org"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/website-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/website.svg" alt="website: bulwarkmail.org" height="24" /></picture></a>&nbsp;
   <a href="https://github.com/bulwarkmail/webmail/releases/latest"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/release-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/release.svg" alt="latest release" height="24" /></picture></a>&nbsp;
+  <a href="https://bulwarkmail.org/docs/deployment/updating/stalwart-1-0"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/stalwart-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/stalwart.svg" alt="tested with Stalwart 1.0" height="24" /></picture></a>&nbsp;
   <a href="https://github.com/bulwarkmail/webmail/blob/main/LICENSE"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/license-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/license.svg" alt="license: AGPL v3" height="24" /></picture></a>&nbsp;
   <a href="https://discord.gg/tYCujymGrT"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/discord-dark.svg" /><img src="https://raw.githubusercontent.com/bulwarkmail/.github/main/badges/discord.svg" alt="Discord members online" height="24" /></picture></a>
 </p>
@@ -18,6 +19,8 @@ docker run -d -p 3000:3000 ghcr.io/bulwarkmail/webmail:latest
 ```
 
 Open `http://localhost:3000` and the setup wizard connects to your Stalwart server and sets the admin password. A standalone Linux tarball is attached to every [release](https://github.com/bulwarkmail/webmail/releases/latest), and the [installation guide](https://bulwarkmail.org/docs/getting-started/installation) covers both.
+
+Bulwark works with Stalwart 0.16.6 or newer, and with Stalwart 1.0 from Bulwark [BULWARK VERSION] on. [Upgrading to Stalwart 1.0](https://bulwarkmail.org/docs/deployment/updating/stalwart-1-0) covers the order of the upgrade and the server settings to check.
 
 ## What it does
 
@@ -55,3 +58,5 @@ Bug reports, feature ideas, translations and code are all welcome. [CONTRIBUTING
 ## License
 
 Bulwark is released under the [GNU AGPL v3](https://github.com/bulwarkmail/webmail/blob/main/LICENSE). The original MIT attribution from the project it was forked from is kept in [NOTICE](https://github.com/bulwarkmail/webmail/blob/main/NOTICE).
+
+<sub>Stalwart is a trademark of Stalwart Labs. Bulwark is an independent project.</sub>

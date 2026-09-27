@@ -84,7 +84,7 @@ async function release() {
 
 async function discord() {
   const r = await json("https://discord.com/api/v9/invites/tYCujymGrT?with_counts=true");
-  return `${r.approximate_presence_count} online`;
+  return `${r.approximate_member_count} members`;
 }
 
 // A failed lookup keeps the badge already on disk instead of writing a wrong one.

@@ -10,7 +10,7 @@ Security fixes are made on `main` and ship in the next release, whether that is 
 | Older releases | ❌ |
 | `main` | Fixes land here first. Not for production. |
 
-Bulwark's update notice turns red when a newer release fixes a security issue. Each fix also gets a GitHub security advisory that names the release it shipped in.
+Bulwark's update notice turns red when a newer release fixes a security issue. Fixes for vulnerabilities reported to us are published as GitHub security advisories once a fixed release is out. Each advisory names the release the fix shipped in.
 
 The same applies to the other Bulwark repositories. The native app is in beta, and legacy-proxy is pre-1.0 and has had no security audit.
 
@@ -24,7 +24,7 @@ If you discover a security vulnerability in Bulwark, please report it privately 
 
 Use GitHub's **[private vulnerability reporting](https://github.com/bulwarkmail/webmail/security/advisories/new)** feature to submit a report. This keeps the details confidential until a fix is released.
 
-Alternatively, you can reach maintainers through the GitHub Security tab in any Bulwark repository.
+Private reporting is turned on in every public Bulwark repository, so you can also file the report from the Security tab of the repository the issue is in.
 
 ### What to include
 
